@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import {
   FaFacebookF,
   FaTwitter,
@@ -7,14 +7,18 @@ import {
   FaPlay
 } from "react-icons/fa"
 
+
 const Banner = () => {
-  const [state,setState] = useState({
-    title : 'I am Harmil GOti',
-    text : "I'm Harmil, i just started my career as a professional web developer in this field",
+  const [state, setState] = useState({
+    title: 'I am Harmil GOti',
+    text: "I'm Harmil, i just started my career as a professional web developer in this field",
   })
-  console.log(setState,"Set")
+  const facebook = "https://www.facebook.com/";
+  const tweeter = "https://www.twetter.com/";
+  const instagram = "https://www.instagram.com/";
+  console.log(setState, "Set")
   return (
-    <header className="header">
+    <header className="header" id='home'>
       <div className="container">
         <div className='banner__row row'>
           <div className="col-6 left__col">
@@ -22,23 +26,23 @@ const Banner = () => {
               <div className="header__section">
                 <ul className="header__ul">
                   <li className="fb">
-                    <a href="https://www.facebook.com/" target={"_blank"}>
-                    <FaFacebookF />
+                    <a href={facebook} target={"_blank"} rel="noreferrer">
+                      <FaFacebookF />
                     </a>
                   </li>
                   <li className="twee">
-                    <a href="https://twitter.com/home" target={"_blank"}>
-                    <FaTwitter  />
+                    <a href={tweeter} target={"_blank"} rel="noreferrer">
+                      <FaTwitter />
                     </a>
                   </li>
                   <li className="insta">
-                    <a href="https://www.instagram.com/" target={"_blank"}>
-                    <FaInstagram  />
+                    <a href={instagram} target={"_blank"} rel="noreferrer">
+                      <FaInstagram />
                     </a>
                   </li>
                   <li className="pin">
                     <a href="">
-                    <FaPinterest  />
+                      <FaPinterest />
                     </a>
                   </li>
                 </ul>
@@ -57,11 +61,13 @@ const Banner = () => {
           </div>
           <div className="col-6 right__col">
             <div className='banner__img1'>
-              <img src={require('../images/myphoto.png')} alt='logo' />
+              <img src={require('../images/myphoto.png')} alt='myimage' />
             </div>
           </div>
         </div>
       </div>
+
+      
     </header>
   )
 }

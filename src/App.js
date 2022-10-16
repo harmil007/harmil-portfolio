@@ -1,18 +1,31 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Banner from "./components/Banner";
 import Nav from "./components/Nav";
 import Services from "./components/Services";
 import About from "./components/About";
+import Error from "./components/Error";
+import HeaderComponent from "./components/HeaderComponent"
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Banner />
+    <BrowserRouter>
+      {/* <Routes>
+        <Route path="/" element={<HeaderComponent />}>
+          <Route path="/" element={<Nav />} />
+          <Route index path="/" element={<Banner />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+      </Routes> */}
+      {/* <HeaderComponent /> */}
       <Nav />
+      <Banner />
       <Services />
       <About />
-    </div>
+    </BrowserRouter>
   );
 }
 

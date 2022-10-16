@@ -11,7 +11,7 @@ const Services = () => {
     text22:"and javascript and the knowledge of reactjs."
   });
   return (
-    <div className="services">
+    <div className="services" id='service'>
       <div className="container">
         <div className="services__header">
           <div className="common">
